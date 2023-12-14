@@ -20,7 +20,7 @@ const someOtherPlaintextPassword = 'pass123';
     });
   }); */
 
-const hashPass  = bcrypt.compareSync(myPlaintextPassword,saltRounds)
+const hashPass  = bcrypt.hashSync(myPlaintextPassword,saltRounds)
 var result = bcrypt.compareSync(myPlaintextPassword, hashPass);
 
 console.log(hashPass)
